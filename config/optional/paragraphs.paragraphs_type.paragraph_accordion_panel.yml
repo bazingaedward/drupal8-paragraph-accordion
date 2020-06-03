@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: paragraph_accordion_panel
+label: 'Paragraph Accordion Panel'
+icon_uuid: null
+description: 'Create tabs that comply to Accessibility (A11Y) standards and on mobile it becomes an accordion.'
+behavior_plugins: {  }

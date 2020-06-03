@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Module for creating the A11Y Paragraphs Tabs paragraph component.
+ */
+
+/**
+ * Implements hook_theme().
+ *
+ * Call the base hook from Paragraphs to allow preprocess hooks to work.
+ */
+function paragraph_accordion_theme() {
+  return [
+    'paragraph__paragraph_accordion_wrapper' => [
+      'render element' => 'element',
+      'template' => 'paragraph--paragraph-accordion-wrapper',
+      'base hook' => 'paragraph',
+    ],
+
+    'field__field_para_accordion_panel' => [
+      'render element' => 'content',
+      'template' => 'field--field-para-accordion-panel',
+      'base hook' => 'field',
+    ],
+
+  ];
+}
