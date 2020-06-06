@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: paragraph_accordion_tab_content
+label: 'Paragraphs Tab Content'
+icon_uuid: null
+description: 'Adds a text field to your Paragraph Accordion Content Panel.'
+behavior_plugins: {  }

@@ -4,8 +4,8 @@ dependencies:
   module:
     - entity_reference_revisions
     - paragraphs
-id: paragraph.field_para_tabs_tab_content
-field_name: field_para_tabs_tab_content
+id: paragraph.field_para_accordion_tab_content
+field_name: field_para_accordion_tab_content
 entity_type: paragraph
 type: entity_reference_revisions
 settings:

@@ -53,7 +53,7 @@
   <div{{ attributes }}>
   	<div class="paragraph-accordion__wrapper">
   		<div class="paragraph-accordion__section-title">
-  			{{ content.field_a11y_para_tabs_sec_title }}</br>
+  			{{ content.field_para_accordion_sec_title }}</br>
   		</div>
   		<div class="paragraph-accordion__section-container">
 
@@ -62,10 +62,10 @@
           <ul role="tablist" class="tabs-tab-list">
 
             {# Loops through the tab sections to print the tab section titles. #}
-            {% for key, item in content.field_a11y_para_tabs_tabs_panel if key|first != '#' %}
+            {% for key, item in content.field_para_accordion_tabs_panel if key|first != '#' %}
 
               <li role="presentation">
-                <a href="#{{ section_id }}-{{ key + 1 }}" role="tab" id="{{ tab_id }}-{{ key + 1 }}" aria-controls="{{ section_id }}-{{ key + 1 }}" aria-selected="true" class="tabs-trigger js-tabs-trigger">{{ item['#paragraph'].field_a11y_para_tabs_tab_title.value }}</a>
+                <a href="#{{ section_id }}-{{ key + 1 }}" role="tab" id="{{ tab_id }}-{{ key + 1 }}" aria-controls="{{ section_id }}-{{ key + 1 }}" aria-selected="true" class="tabs-trigger js-tabs-trigger">{{ item['#paragraph'].field_para_accordion_tab_title.value }}</a>
               </li>
             
             {% endfor %}
@@ -75,17 +75,17 @@
           <div>
           
             {# Loops through the tab sections again to print the tab section bodies. #}
-            {% for key, item in content.field_a11y_para_tabs_tabs_panel if key|first != '#' %}
+            {% for key, item in content.field_para_accordion_tabs_panel if key|first != '#' %}
 
               <section id="{{ section_id }}-{{ key + 1 }}" role="tabpanel" aria-labelledby="{{ tab_id }}-{{ key + 1 }}" class="tabs-panel js-tabs-panel" tabindex="0">
 
                 <div class="accordeon-trigger js-accordeon-trigger" aria-controls="{{ section_id }}-{{ key + 1 }}" aria-expanded="true" tabindex="0">
-                  {{ item['#paragraph'].field_a11y_para_tabs_tab_title.value }}
+                  {{ item['#paragraph'].field_para_accordion_tab_title.value }}
                 </div>
 
                 <div class="content" aria-hidden="false">
 
-                  {% for body_key, body_item in item['#paragraph'].field_a11y_para_tabs_tab_content %}
+                  {% for body_key, body_item in item['#paragraph'].field_para_accordion_tab_content %}
 
                     {# Use the same render array as item and set the '#paragraph'. #}
                     {% set section_body = item %}
@@ -93,15 +93,15 @@
                     {% set lang = section_body['#paragraph'].langcode[0].value %}
                   
                     {# Check if a translation exists #}
-                    {% if section_body['#paragraph'].field_a11y_para_tabs_tab_content[body_key].entity.hasTranslation(lang) %}
+                    {% if section_body['#paragraph'].field_para_accordion_tab_content[body_key].entity.hasTranslation(lang) %}
 
                       {# Load the entity for the current translation #}
-                      {% set section_translation= section_body['#paragraph'].field_a11y_para_tabs_tab_content[body_key].entity.getTranslation(lang) %}
+                      {% set section_translation= section_body['#paragraph'].field_para_accordion_tab_content[body_key].entity.getTranslation(lang) %}
                   
                     {% else %}
                     
                       {# Load the source entity #}
-                      {% set section_translation= section_body['#paragraph'].field_a11y_para_tabs_tab_content[body_key].entity %}
+                      {% set section_translation= section_body['#paragraph'].field_para_accordion_tab_content[body_key].entity %}
 
                     {% endif %}
 

@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: paragraph_accordion_wrapper
+label: 'Paragraph Accordion Wrapper'
+icon_uuid: null
+description: 'Adds a wrapper for the Paragraph Accordion panel.'
+behavior_plugins: {  }

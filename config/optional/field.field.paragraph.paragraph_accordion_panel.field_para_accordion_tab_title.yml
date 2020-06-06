@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_para_accordion_tab_title
+    - paragraphs.paragraphs_type.paragraph_accordion_panel
+  module:
+    - text
+id: paragraph.paragraph_accordion_panel.field_para_accordion_tab_title
+field_name: field_para_accordion_tab_title
+entity_type: paragraph
+bundle: paragraph_accordion_panel
+label: 'Tab Title'
+description: 'Add a title for the Tab.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -2,18 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.paragraphs_tabs_wrapper.field_para_tabs_sec_title
-    - field.field.paragraph.paragraphs_tabs_wrapper.field_para_tabs_tabs_panel
-    - paragraphs.paragraphs_type.paragraphs_tabs_wrapper
+    - field.field.paragraph.paragraph_accordion_wrapper.field_para_accordion_sec_title
+    - field.field.paragraph.paragraph_accordion_wrapper.field_para_accordion_tabs_panel
+    - paragraphs.paragraphs_type.paragraph_accordion_wrapper
   module:
     - paragraphs
     - text
-id: paragraph.paragraphs_tabs_wrapper.default
+id: paragraph.paragraph_accordion_wrapper.default
 targetEntityType: paragraph
-bundle: paragraphs_tabs_wrapper
+bundle: paragraph_accordion_wrapper
 mode: default
 content:
-  field_para_tabs_sec_title:
+  field_para_accordion_sec_title:
     weight: 0
     settings:
       size: 60
@@ -21,7 +21,7 @@ content:
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_para_tabs_tabs_panel:
+  field_para_accordion_tabs_panel:
     type: entity_reference_paragraphs
     weight: 1
     settings:

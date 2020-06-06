@@ -2,3 +2,7 @@
  * @file
  * Paragraph Accordion Module Default Styling
  */
+
+ .paragraph-accordion__section-title {
+   color: red;
+ }

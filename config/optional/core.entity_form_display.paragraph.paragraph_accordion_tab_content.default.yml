@@ -2,16 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.paragraphs_tab_content.field_para_tabs_text_area
-    - paragraphs.paragraphs_type.paragraphs_tab_content
+    - field.field.paragraph.paragraph_accordion_tab_content.field_para_accordion_text_area
+    - paragraphs.paragraphs_type.paragraph_accordion_tab_content
   module:
     - text
-id: paragraph.paragraphs_tab_content.default
+id: paragraph.paragraph_accordion_tab_content.default
 targetEntityType: paragraph
-bundle: paragraphs_tab_content
+bundle: paragraph_accordion_tab_content
 mode: default
 content:
-  field_para_tabs_text_area:
+  field_para_accordion_text_area:
     weight: 0
     settings:
       rows: 5

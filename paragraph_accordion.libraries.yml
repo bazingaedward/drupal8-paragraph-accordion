@@ -1,7 +1,7 @@
 assets:
   version: 1.x
   js:
-    js/paragraph-accordion.js: {}
+    js/accordion.js: {}
   css:
     theme:
       css/paragraph-accordion.css: {}

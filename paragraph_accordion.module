@@ -10,6 +10,7 @@
  *
  * Call the base hook from Paragraphs to allow preprocess hooks to work.
  */
+
 function paragraph_accordion_theme() {
   return [
     'paragraph__paragraph_accordion_wrapper' => [
@@ -18,9 +19,9 @@ function paragraph_accordion_theme() {
       'base hook' => 'paragraph',
     ],
 
-    'field__field_para_accordion_panel' => [
+    'field__field_para_accordion_tabs_panel' => [
       'render element' => 'content',
-      'template' => 'field--field-para-accordion-panel',
+      'template' => 'field--field-para-accordion-tabs-panel',
       'base hook' => 'field',
     ],
 
