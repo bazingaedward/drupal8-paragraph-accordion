@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_para_tabs_tab_content
+    - paragraphs.paragraphs_type.paragraphs_tab_content
+    - paragraphs.paragraphs_type.paragraphs_tabs_panel
+  module:
+    - entity_reference_revisions
+id: paragraph.paragraphs_tabs_panel.field_para_tabs_tab_content
+field_name: field_para_tabs_tab_content
+entity_type: paragraph
+bundle: paragraphs_tabs_panel
+label: 'Tab Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      paragraphs_tab_content: paragraphs_tab_content
+    target_bundles_drag_drop:
+      paragraphs_tabs_panel:
+        weight: 3
+        enabled: false
+      paragraphs_tabs_wrapper:
+        weight: 4
+        enabled: false
+      paragraphs_tab_content:
+        enabled: true
+        weight: 6
+field_type: entity_reference_revisions
