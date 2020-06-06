@@ -1,5 +1,5 @@
 name: 'Paragraph Accordion'
-description: 'test'
+description: 'Add Accordion type for paragraphs module'
 package: Custom
 
 type: module

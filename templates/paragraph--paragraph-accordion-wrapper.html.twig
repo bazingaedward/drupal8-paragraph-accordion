@@ -57,22 +57,7 @@
   		</div>
   		<div class="paragraph-accordion__section-container">
 
-			  <div class="accordion-tabs js-tabs">
-		    	
-          <ul role="tablist" class="tabs-tab-list">
-
-            {# Loops through the tab sections to print the tab section titles. #}
-            {% for key, item in content.field_para_accordion_tabs_panel if key|first != '#' %}
-
-              <li role="presentation">
-                <a href="#{{ section_id }}-{{ key + 1 }}" role="tab" id="{{ tab_id }}-{{ key + 1 }}" aria-controls="{{ section_id }}-{{ key + 1 }}" aria-selected="true" class="tabs-trigger js-tabs-trigger">{{ item['#paragraph'].field_para_accordion_tab_title.value }}</a>
-              </li>
-            
-            {% endfor %}
-          
-          </ul>
-
-          <div>
+			  <div class="accordion-tabs js-accordion">
           
             {# Loops through the tab sections again to print the tab section bodies. #}
             {% for key, item in content.field_para_accordion_tabs_panel if key|first != '#' %}
@@ -114,8 +99,6 @@
                     {{ section_body }}
                   
                   {% endfor %}
-
-                </div>
 
               </section>
 
